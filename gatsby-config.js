@@ -14,6 +14,24 @@ module.exports = {
                 path: `${__dirname}/src/images`
             },
         },
-        'gatsby-transformer-remark'
+        {
+            resolve: 'gatsby-transformer-remark',
+            options: {
+                plugins: [
+                    {
+                        resolve: 'gatsby-remark-images',
+                        options: {
+                            maxWidth: 800,
+                            withWebp: true,
+                            tracedSVG: {
+                                color: 'aliceblue'
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        'gatsby-plugin-sharp',
+        'gatsby-transformer-sharp',
     ]
 }

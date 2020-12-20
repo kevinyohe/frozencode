@@ -15,3 +15,5 @@ date: '12-18-2020'
 ```
 some code
 ```
+
+![frozen image](../images/frozen.jpg)
