@@ -1,5 +1,5 @@
 import React from 'react';
-import {graphql} from 'gatsby';
+import {graphql, Link} from 'gatsby';
 import Img from 'gatsby-image';
 
 const Index = ({data}) =>{
@@ -12,7 +12,7 @@ const Index = ({data}) =>{
         
         <ul>
         {data.toc.nodes.map((thing)=> (
-        <li style={{listStyleType: "none"}}><a href={thing.frontmatter.slug}>{thing.frontmatter.title}</a></li>
+        <li style={{listStyleType: "none"}}><Link to={thing.frontmatter.slug}>{thing.frontmatter.title}</Link></li>
         ))}
         </ul>
         </div>
